@@ -1,7 +1,6 @@
 // import
 import express from "express";
 import mongoose from "mongoose";
-import bodyParser from "body-parser";
 import Messages from "./dbMessages.js";
 
 // app config
@@ -10,7 +9,6 @@ const port = process.env.PORT || 3000;
 
 //middleware
 app.use(express.json());
-app.use(bodyParser.json());
 
 //db config
 const connection_url =
@@ -22,6 +20,16 @@ mongoose.connect(connection_url);
 
 // api routes
 app.get("/", (req, res) => res.status(200).send("Hello World"));
+
+app.get("/messages/sync", (req, res) => {
+  Messages.find((err, data) => {
+    if (err) {
+      res.status(500).send(err); // INTERNAL SERVER ERROR
+    } else {
+      res.status(200).send(data); // OK
+    }
+  });
+});
 
 app.post("/messages/new", (req, res) => {
   const dbMessage = req.body;
