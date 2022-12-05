@@ -15,7 +15,7 @@ function Chat({ messages }) {
 
     await axios.post("/messages/new", {
       message: input,
-      name: "Nizar",
+      name: "Cindy",
       received: false,
     });
     // timestamp: "One minute ago",
@@ -54,7 +54,9 @@ function Chat({ messages }) {
             <span className="chat__name">{message.name}</span>
             {message.message}
             {/* <span className="chat__timestamp">{message.timestamp}</span> */}
-            <span className="chat__timestamp">{moment().format("hh:mm")}</span>
+            <span className="chat__timestamp">
+              {moment().format("hh:mm A")}
+            </span>
           </p>
         ))}
       </div>
