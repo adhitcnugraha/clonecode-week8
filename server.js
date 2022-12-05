@@ -6,7 +6,7 @@ import cors from "cors";
 
 // App Config
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // Middleware
 app.use(express.json());
@@ -33,6 +33,8 @@ db.once("open", () => {
       pusher.trigger("messages", "got inserted", {
         name: messageDetails.name,
         message: messageDetails.message,
+        timestamp: messageDetails.timestamp,
+        received: messageDetails.received,
       });
     } else {
       console.log("Error triggering at Pusher");
