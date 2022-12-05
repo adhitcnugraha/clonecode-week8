@@ -15,8 +15,8 @@ function Chat({ messages }) {
 
     await axios.post("/messages/new", {
       message: input,
-      name: "Cindy",
-      received: false,
+      name: "Adhitia",
+      received: true,
     });
     // timestamp: "One minute ago",
 
@@ -26,7 +26,7 @@ function Chat({ messages }) {
   return (
     <div className="chat">
       <div className="chat__header">
-        <Avatar />
+        <Avatar src="https://img.freepik.com/premium-vector/cute-white-cat-cartoon-vector-illustration_42750-808.jpg?w=2000" />
 
         <div className="chat__headerInfo">
           <h3>Team 8</h3>
