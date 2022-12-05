@@ -8,7 +8,6 @@ function SidebarChat() {
       <Avatar />
       <div className="sidebarChat__info">
         <h2>Team 8</h2>
-        <p>I think its ...</p>
       </div>
     </div>
   );
