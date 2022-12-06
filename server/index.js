@@ -7,7 +7,7 @@ const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 
 // database connection
-connection();
+connection("mongodb+srv://team8:team8clonecode@cluster0.y7ypahk.mongodb.net/?retryWrites=true&w=majority");
 
 // middlewares
 app.use(express.json());
