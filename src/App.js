@@ -8,7 +8,7 @@ import axios from "./axios";
 function App() {
   const [messages, setMessages] = useState([]);
   useEffect(() => {
-    axios.get("/messages/sync").then((response) => {
+    axios.get("/messages/get").then((response) => {
       setMessages(response.data);
     });
   }, []);
