@@ -54,7 +54,7 @@ const pusher = new Pusher({
   useTLS: true,
 });
 
-app.get("/messages/sync", (req, res) => {
+app.get("/messages/get", (req, res) => {
   Messages.find((err, data) => {
     if (err) {
       res.status(500).send(err); // INTERNAL SERVER ERROR

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const wacappSchema = mongoose.Schema({
   message: String,
   name: String,
-  timestamp: String,
+  timestamp: Date,
   received: Boolean,
 });
 
