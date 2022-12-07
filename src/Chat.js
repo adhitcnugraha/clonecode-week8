@@ -18,7 +18,7 @@ function Chat({ messages }) {
       name: "Adhitia",
       received: true,
     });
-    // timestamp: "One minute ago",
+    // timestamp: Timestamp(),
 
     setInput("");
   };
@@ -55,6 +55,7 @@ function Chat({ messages }) {
             {message.message}
             {/* <span className="chat__timestamp">{message.timestamp}</span> */}
             <span className="chat__timestamp">
+              {/* {message.Timestamp} */}
               {moment().format("hh:mm A")}
             </span>
           </p>
