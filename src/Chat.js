@@ -17,8 +17,8 @@ function Chat({ messages }) {
       message: input,
       name: "Adhitia",
       received: true,
+      timestamp: moment(),
     });
-    // timestamp: Timestamp(),
 
     setInput("");
   };
@@ -56,7 +56,7 @@ function Chat({ messages }) {
             {/* <span className="chat__timestamp">{message.timestamp}</span> */}
             <span className="chat__timestamp">
               {/* {message.Timestamp} */}
-              {moment().format("hh:mm A")}
+              {moment(message.timestamp).format("hh:mm A")}
             </span>
           </p>
         ))}
