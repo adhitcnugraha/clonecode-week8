@@ -9,7 +9,7 @@ function SidebarChat() {
       <Avatar src="https://img.freepik.com/premium-vector/cute-white-cat-cartoon-vector-illustration_42750-808.jpg?w=2000" />
       <div className="sidebarChat__info">
         <h2>Team 8</h2>
-        <p>Adhitia: ...</p>
+        <p>You: ...</p>
       </div>
     </div>
   );
